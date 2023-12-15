@@ -1,0 +1,39 @@
+<div class="container">
+    <form [formGroup]="studentForm">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Name</span>
+        </div>
+        <input type="text" aria-label="name" id="name" name="name" formControlName="name" class="form-control" />
+        <div *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.invalid" class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+      <br />
+  
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Email</span>
+        </div>
+        <textarea type="text" aria-label="email" id="email" name="email" formControlName="email"
+          class="form-control"></textarea>
+        <div *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.invalid" class="alert alert-danger">
+          Email is required
+        </div>
+      </div>
+  
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Gender</span>
+        </div>
+        <input type="text" aria-label="gender" id="gender" name="gender" formControlName="gender"
+          class="form-control" />
+        <div *ngIf="studentForm.get('gender')?.touched && studentForm.get('gender')?.invalid" class="alert alert-danger">
+          Gender is required
+        </div>
+      </div>
+  
+      <br />
+      <input type="submit" (click)="add()" />
+    </form>
+  </div>

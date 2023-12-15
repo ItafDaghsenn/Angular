@@ -1,0 +1,65 @@
+<div class="row clearfix">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <table id="app_user" class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>nom</th>
+                            <th>email</th>
+                            <th>gender</th>
+                            <th>action</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody *ngFor="let e of studentlist">
+                        <tr>
+
+                            <td>
+                                <div class="mt-3">
+
+                                    <h6 class="mb-0"> {{e.id}} </h6>
+                                </div>
+                            </td>
+
+
+
+                            <td>
+                                <div class="mt-3">
+                                    <h6 class="mb-0">{{e.name}} </h6>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mt-3" widhth="40px">
+
+                                    <h6 class="mb-0">{{e.email}} </h6>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mt-3" widhth="40px">
+
+                                    <h6 class="mb-0">{{e.gender}} </h6>
+
+                                </div>
+                            </td>
+
+                            <td>
+                                <a href="#" class="btn btn-primary" [routerLink]="['showstudent', e.id]">detaille
+                                    </a>
+                            </td>
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+                <a href="#" class="btn btn-primary" [routerLink]="['addstudent']">add 
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>

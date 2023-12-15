@@ -1,0 +1,11 @@
+<p>Student Details:</p>
+<ul>
+  <li *ngFor="let a of studentlist">
+    <div *ngIf="a.id === id">
+      <p>ID: {{ a.id }}</p>
+      <p>Nom: {{ a.name }}</p>
+      <p>Email: {{ a.email }}</p>
+      <p>Genre: {{ a.gender }}</p>
+    </div>
+  </li>
+</ul>
